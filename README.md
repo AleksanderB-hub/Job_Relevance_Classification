@@ -1,4 +1,4 @@
-# Binary Relevance RoBERTa — Training Shell
+# Binary Relevance RoBERTa (Training + Eval)
 
 Public companion to [`Aleksandruz/Binary-Relevance-RoBERTa`](https://huggingface.co/Aleksandruz/Binary-Relevance-RoBERTa)
 on the Hugging Face Hub.
