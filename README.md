@@ -89,15 +89,18 @@ Please refer to the [HF](https://huggingface.co/Aleksandruz/Binary-Relevance-RoB
 If you have your own training data in the same \`Sentence \t label\` TSV
 format, the full pipeline is:
 
-\`\`\`bash
 # 1. hyperparameter search
+```bash
 python src/Roberta_Search.py --n-trials 30
-
-# 2. final training + evaluation 
+```
+# 2. final training
+```bash
 python src/Full_Roberta_binary.py
+```
+# 3. Evaluation
+```bash
 python src/Eval_Roberta.py
-\`\`\`
-
+```
 ## Model Details
 
 See the [model card on Hugging Face](https://huggingface.co/Aleksandruz/Binary-Relevance-RoBERTa)
