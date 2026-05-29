@@ -40,23 +40,31 @@ Clone, set up an environment, and reproduce the test-set metrics against the
 published model:
 
 ```bash
-git clone [https://github.com/AleksanderB-hub/Job_Relevance_Classification](https://github.com/AleksanderB-hub/Job_Relevance_Classification)
+git clone git clone https://github.com/AleksanderB-hub/Job_Relevance_Classification
 cd Job_Relevance_Classification
 python -m venv .venv
 ```
 # Windows
+```bash
 .venv\Scripts\activate
+```
 # macOS / Linux
+```bash
 source .venv/bin/activate
-
+```
+# Libraries
+```bash
 pip install -r requirements.txt
+```
 
 # fetch and prepare the three public test sets
+```bash
 python src/prepare_test_data.py
-
+```
 # evaluate the published HF model on those test sets
+```bash
 python src/Eval_Roberta.py
-\`\`\`
+```
 
 \`Eval_Roberta.py\` defaults to the Hub model
 \`Aleksandruz/Binary-Relevance-RoBERTa\`. Override with \`--model-id <path-or-id>\`
