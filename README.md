@@ -19,6 +19,7 @@ reproduces the process.
 
 ## Repository Structure
 
+```text
 .
 ├── src/
 │   ├── config.py                  # shared paths / project root resolution
@@ -31,6 +32,7 @@ reproduces the process.
 ├── results/                       # search artefacts (best_params, trials)
 ├── requirements.txt
 └── README.md
+```
 
 ## Quickstart
 
