@@ -39,11 +39,11 @@ reproduces the process.
 Clone, set up an environment, and reproduce the test-set metrics against the
 published model:
 
-\`\`\`bash
-git clone https://github.com/AleksanderB-hub/Job_Relevance_Classification
-cd <repo>
-
+```bash
+git clone [https://github.com/AleksanderB-hub/Job_Relevance_Classification](https://github.com/AleksanderB-hub/Job_Relevance_Classification)
+cd Job_Relevance_Classification
 python -m venv .venv
+```
 # Windows
 .venv\Scripts\activate
 # macOS / Linux
