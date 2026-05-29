@@ -19,7 +19,6 @@ reproduces the process.
 
 ## Repository Structure
 
-\`\`\`
 .
 ├── src/
 │   ├── config.py                  # shared paths / project root resolution
@@ -32,7 +31,6 @@ reproduces the process.
 ├── results/                       # search artefacts (best_params, trials)
 ├── requirements.txt
 └── README.md
-\`\`\`
 
 ## Quickstart
 
@@ -74,28 +72,7 @@ and pick the device with \`--device cuda|cpu\`.
 
 ## Using the Model
 
-The pushed model is a standalone \`RobertaForSequenceClassification\` — no PEFT
-needed at inference. The tuned decision threshold rides along inside
-\`config.json\` as \`decision_threshold\`.
-
-\`\`\`python
-from src.Inference_Roberta import RelevanceClassifier
-
-clf = RelevanceClassifier("Aleksandruz/Binary-Relevance-RoBERTa", device="cuda")
-
-sentences = ["Manage a team of engineers.", "Free snacks provided."]
-clf.predict(sentences, mode="clean")   # array([1, 0])
-clf.predict(sentences, mode="prob")    # [[P(0), P(1)], ...]
-\`\`\`
-
-Or via plain \`transformers\`:
-
-\`\`\`python
-from transformers import AutoModelForSequenceClassification, AutoTokenizer
-model = AutoModelForSequenceClassification.from_pretrained("Aleksandruz/Binary-Relevance-RoBERTa")
-tokenizer = AutoTokenizer.from_pretrained("Aleksandruz/Binary-Relevance-RoBERTa")
-threshold = getattr(model.config, "decision_threshold", 0.5)
-\`\`\`
+Please refer to the [HF](https://huggingface.co/Aleksandruz/Binary-Relevance-RoBERTa) model page for example usage. 
 
 ## Training Pipeline (for reference)
 
@@ -106,14 +83,10 @@ format, the full pipeline is:
 # 1. hyperparameter search
 python src/Roberta_Search.py --n-trials 30
 
-# 2. final training + evaluation + (optional) Hub push
+# 2. final training + evaluation 
 python src/Full_Roberta_binary.py
-python src/Full_Roberta_binary.py --push --repo-id <user>/<repo>
+python src/Eval_Roberta.py
 \`\`\`
-
-Configure paths in \`src/config.py\`. The project root is auto-detected from
-the location of \`config.py\`, so the scripts work regardless of where the
-repo is cloned.
 
 ## Model Details
 
