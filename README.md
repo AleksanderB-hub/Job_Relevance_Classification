@@ -40,7 +40,7 @@ Clone, set up an environment, and reproduce the test-set metrics against the
 published model:
 
 \`\`\`bash
-git clone https://github.com/<your-user>/<repo>.git
+git clone https://github.com/AleksanderB-hub/Job_Relevance_Classification
 cd <repo>
 
 python -m venv .venv
