@@ -1,0 +1,21 @@
+{
+  "base_model": "roberta-base",
+  "lora_targets": [
+    "query",
+    "value"
+  ],
+  "max_length": 128,
+  "num_epochs": 8,
+  "per_device_batch_size": 8,
+  "best_trial": 3,
+  "best_val_macro_f1_tuned": 0.8381714073955684,
+  "threshold": 0.57,
+  "params": {
+    "learning_rate": 0.0004093813608598784,
+    "lora_r": 4,
+    "lora_dropout": 0.20526990795364705,
+    "weight_decay": 0.04401524937396013,
+    "warmup_ratio": 0.012203823484477884,
+    "grad_accum": 4
+  }
+}
